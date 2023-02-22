@@ -29,7 +29,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="../SA2/login.php">登入</a></li>
+                        <li><a class="dropdown-item" href="login.php">登入</a></li>
                     </ul>
                 </li>
             </ul>
@@ -72,7 +72,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">模擬訓練</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">查看更多</a>
+                                        <a class="small text-white stretched-link" href="train.php">查看更多</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
