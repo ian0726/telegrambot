@@ -10,110 +10,204 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <div id="layoutError">
-            <div id="layoutError_content">
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.php">行前訓練管理系統</a>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item">徐安辰</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">                            
+                            <div class="sb-sidenav-menu-heading">項目編輯</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                訓練主體                               
+                            </a>                       
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                訓練資訊
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">                                    
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages"></div>                                                                   
+                                </nav>
+                            </div>
+                            <div class="sb-sidenav-menu-heading">項目查看</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                教學日誌回報
+                            </a>                           
+                        </div>
+                    </div>                    
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
                 <main>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-6">
-                                <div class="text-center mt-4">
-                                    <h1 class="display-1">訓練資訊</h1>
-                                    <h3>編輯</h3>
-                                    <div class="card mb-4">
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">訓練資訊</h1>
+                        <ol class="breadcrumb mb-4"></ol>
+                        
+                        <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                訓練資訊
+                                教學
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>No.</th>
-                                            <th>內容</th>
+                                            <th></th>
+                                            <th>Question</th>
+                                            <th>Solution</th>
+                                            <th>編輯</th>
                                             <th>刪除</th>
                                         </tr>
                                     </thead>
-                                  
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th>Question</th>
+                                            <th>Solution</th>
+                                            <th>編輯</th>
+                                            <th>刪除</th>
+                                        </tr>
+                                    </tfoot>
                                     <tbody>
+                                        <?php
+                                            $host = "localhost";
+                                            $username = "root";
+                                            $password = "root";
+                                            $database = "chatbot";  
+
+                                            $conn = mysqli_connect($host, $username, $password, $database);
+
+                                            if (!$conn) {
+                                            die("Connection failed: " . mysqli_connect_error());
+                                            }
+
+                                            $sql = "SELECT id, question, solution FROM teaching";
+                                            $result = mysqli_query($conn, $sql);
+
+                                            if (mysqli_num_rows($result) > 0) {
+                                                while($row = mysqli_fetch_assoc($result)) {
+                                                    echo "<tr>";
+                                                    echo "<td>".$row["id"]."</td>";
+                                                    echo "<td>".$row["question"]."</td>";
+                                                    echo "<td>".$row["solution"]."</td>";
+                                                    echo "<td>";
+                                                    echo "<button>Edit</button>";
+                                                    echo "</td>";
+                                                    echo "<td>";
+                                                    echo "<button>Delete</button>";
+                                                    echo "</td>";
+                                                    echo "</tr>";
+                                                }
+                                            } else {
+                                                echo "0 results";
+                                            }
+
+                                            mysqli_close($conn);
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                基本注意事項
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
                                         <tr>
-                                            <td>1.</td>
-                                            <td>第一次進行任教難免會緊張，盡量放鬆自己。</td>
-                                            <td>delete</td>
+                                            <th></th>
+                                            <th>Question</th>
+                                            <th>Solution</th>
+                                            <th>編輯</th>
+                                            <th>刪除</th>
                                         </tr>
+                                    </thead>
+                                    <tfoot>
                                         <tr>
-                                            <td>2.</td>
-                                            <td>千萬不要發脾氣，作為老師應該耐心地教導學生。</td>
-                                            <td>delete</td>
+                                            <th></th>
+                                            <th>Question</th>
+                                            <th>Solution</th>
+                                            <th>編輯</th>
+                                            <th>刪除</th>
                                         </tr>
-                                        <tr>
-                                            <td>3.</td>
-                                            <td>如果要請假，要記得提早向組長交代，好讓組長讓其他組員頂替。</td>
-                                            <td>delete</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4.</td>
-                                            <td>如果小朋友有問題，想問的話，應該主動為他們去做解答。</td>
-                                            <td>delete</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5.</td>
-                                            <td>在上堂時，應主動詢問小朋友有沒有那些地方不明白，了解小朋友能否跟上進度。</td>
-                                            <td>delete</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6.</td>
-                                            <td>有時候可能會任教到一些較頑皮的學生，我們應該要更加有耐心地去教導他們。</td>
-                                            <td>delete</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7.</td>
-                                            <td>可以為學童們定立簡單小測試，確認他們有複習。</td>
-                                            <td>delete</td>
-                                        </tr>
-                                        <tr>
-                                            <td>8.</td>
-                                            <td>在課堂上積極和小學同進行討論，透過不斷的討論可以幫助學童釐清觀念，讓他們進步</td>
-                                            <td>delete</td>
-                                        </tr>
-                                      
-                                   
-                                       
-                                      
+                                    </tfoot>
+                                    <tbody>
+                                        <?php
+                                            $host = "localhost";
+                                            $username = "root";
+                                            $password = "root";
+                                            $database = "chatbot";  
+
+                                            $conn = mysqli_connect($host, $username, $password, $database);
+
+                                            if (!$conn) {
+                                            die("Connection failed: " . mysqli_connect_error());
+                                            }
+
+                                            $sql = "SELECT id, question, solution FROM notice";
+                                            $result = mysqli_query($conn, $sql);
+
+                                            if (mysqli_num_rows($result) > 0) {
+                                                while($row = mysqli_fetch_assoc($result)) {
+                                                    echo "<tr>";
+                                                    echo "<td>".$row["id"]."</td>";
+                                                    echo "<td>".$row["question"]."</td>";
+                                                    echo "<td>".$row["solution"]."</td>";
+                                                    echo "<td>";
+                                                    echo "<button>Edit</button>";
+                                                    echo "</td>";
+                                                    echo "<td>";
+                                                    echo "<button>Delete</button>";
+                                                    echo "</td>";
+                                                    echo "</tr>";
+                                                }
+                                            } else {
+                                                echo "0 results";
+                                            }
+
+                                            mysqli_close($conn);
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-                                    <p><a href="404.php">
-                                        <i class="fas fa-arrow-right me-1"></i>
-                                        EDIT
-                                    <p><a href="index2.php">
-                                        <i class="fas fa-arrow-left me-1"></i>
-                                        Return to page
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </main>
-            </div>
-            <div id="layoutError_footer">
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <footer class="py-4 bg-light mt-auto"></footer>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
     </body>
 </html>
