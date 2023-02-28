@@ -16,7 +16,7 @@
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.php">行前訓練管理系統</a>
+            <a class="navbar-brand ps-3" href="index2.php">行前訓練管理系統</a>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
@@ -40,11 +40,11 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">                            
                             <div class="sb-sidenav-menu-heading">項目編輯</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 訓練主體                               
                             </a>                       
-                            <a class="nav-link collapsed" href="500.php" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <a class="nav-link" href="500.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 訓練資訊
                             </a>
@@ -54,7 +54,7 @@
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">項目查看</div>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="charts.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 教學日誌回報
                             </a>                           
@@ -72,7 +72,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">模擬測驗</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">編輯</a>
+                                        <a class="small text-white stretched-link" href="train.php">編輯</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@
                                 <div class="card bg-danger text-white mb-4">
                                     <div class="card-body">聯絡協會</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">編輯</a>
+                                        <a class="small text-white stretched-link" href="contact.php">編輯</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
