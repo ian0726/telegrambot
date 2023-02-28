@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -66,7 +69,25 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">訓練資訊</h1>
                         <ol class="breadcrumb mb-4"></ol>
+<<<<<<< Updated upstream
                         
+=======
+                        <?php
+                            include('message.php');
+                        ?>
+                        <form method="post" action="receive.php">&ensp;請輸入教學資訊：&emsp;&emsp;
+                            <input type="text" name="question" placeholder="Question" size="56">
+                            <input type="text" name="solution" placeholder="Solution" size="56">
+                            <button class="btn btn-primary" name="save_teaching" type="submit">新增</button>
+                        </form>
+                        <br />
+                        <form method="post" action="receive.php">&ensp;請輸入基本注意事項：
+                            <input type="text" name="question2" placeholder="Question" size="56">
+                            <input type="text" name="solution2" placeholder="Solution" size="56">
+                            <button class="btn btn-primary" name="save_notice" type="submit">新增</button>
+                        </form>
+                        <br />
+>>>>>>> Stashed changes
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
@@ -93,7 +114,11 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
+<<<<<<< Updated upstream
                                         <?php
+=======
+                                        <?php 
+>>>>>>> Stashed changes
                                             $host = "localhost";
                                             $username = "root";
                                             $password = "root";
@@ -105,6 +130,7 @@
                                             die("Connection failed: " . mysqli_connect_error());
                                             }
 
+<<<<<<< Updated upstream
                                             $sql = "SELECT id, question, solution FROM teaching";
                                             $result = mysqli_query($conn, $sql);
 
@@ -128,6 +154,35 @@
 
                                             mysqli_close($conn);
                                         ?>
+=======
+                                            $query = "SELECT * FROM teaching";
+                                            $query_run = mysqli_query($conn, $query);
+
+                                            if(mysqli_num_rows($query_run) > 0){
+                                                foreach($query_run as $teaching){
+                                                    ?>
+                                                    <tr>
+                                                        <td><?= $teaching['id']; ?></td>
+                                                        <td><?= $teaching['question']; ?></td>
+                                                        <td><?= $teaching['solution']; ?></td>
+                                                        <td>
+                                                            <a href="edit.php?id=<?= $teaching['id']; ?>" class="btn btn-success btn-sm">Edit</a>
+                                                        </td>
+                                                        <td>
+                                                            <form action="code.php" method="POST" class="d-inline">
+                                                                <button type="submit" name="delete_student" value="<?=$teaching['id'];?>" class="btn btn-danger btn-sm">Delete</button>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                                }
+                                            }
+                                            else{
+                                                echo "<h5> No Record Found </h5>";
+                                            }
+                                        ?>
+                                
+>>>>>>> Stashed changes
                                     </tbody>
                                 </table>
                             </div>
@@ -138,7 +193,11 @@
                                 基本注意事項
                             </div>
                             <div class="card-body">
+<<<<<<< Updated upstream
                                 <table id="datatablesSimple">
+=======
+                                <table class="table table-striped"><!--table-bordered-->
+>>>>>>> Stashed changes
                                     <thead>
                                         <tr>
                                             <th></th>
@@ -170,6 +229,7 @@
                                             die("Connection failed: " . mysqli_connect_error());
                                             }
 
+<<<<<<< Updated upstream
                                             $sql = "SELECT id, question, solution FROM notice";
                                             $result = mysqli_query($conn, $sql);
 
@@ -193,6 +253,35 @@
 
                                             mysqli_close($conn);
                                         ?>
+=======
+                                            $query = "SELECT * FROM notice";
+                                            $query_run = mysqli_query($conn, $query);
+
+                                            if(mysqli_num_rows($query_run) > 0){
+                                                foreach($query_run as $notice){
+                                                    ?>
+                                                    <tr>
+                                                        <td><?= $notice['id']; ?></td>
+                                                        <td><?= $notice['question']; ?></td>
+                                                        <td><?= $notice['solution']; ?></td>
+                                                        <td>
+                                                            <a href="edit.php?id=<?= $notice['id']; ?>" class="btn btn-success btn-sm">Edit</a>
+                                                        </td>
+                                                        <td>
+                                                            <form action="code.php" method="POST" class="d-inline">
+                                                                <button type="submit" name="delete_student" value="<?=$notice['id'];?>" class="btn btn-danger btn-sm">Delete</button>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
+                                                }
+                                            }
+                                            else{
+                                                echo "<h5> No Record Found </h5>";
+                                            }
+                                        ?>
+
+>>>>>>> Stashed changes
                                     </tbody>
                                 </table>
                             </div>
