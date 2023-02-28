@@ -69,9 +69,6 @@ session_start();
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">訓練資訊</h1>
                         <ol class="breadcrumb mb-4"></ol>
-<<<<<<< Updated upstream
-                        
-=======
                         <?php
                             include('message.php');
                         ?>
@@ -87,7 +84,6 @@ session_start();
                             <button class="btn btn-primary" name="save_notice" type="submit">新增</button>
                         </form>
                         <br />
->>>>>>> Stashed changes
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
@@ -114,11 +110,7 @@ session_start();
                                         </tr>
                                     </tfoot>
                                     <tbody>
-<<<<<<< Updated upstream
-                                        <?php
-=======
                                         <?php 
->>>>>>> Stashed changes
                                             $host = "localhost";
                                             $username = "root";
                                             $password = "root";
@@ -130,31 +122,6 @@ session_start();
                                             die("Connection failed: " . mysqli_connect_error());
                                             }
 
-<<<<<<< Updated upstream
-                                            $sql = "SELECT id, question, solution FROM teaching";
-                                            $result = mysqli_query($conn, $sql);
-
-                                            if (mysqli_num_rows($result) > 0) {
-                                                while($row = mysqli_fetch_assoc($result)) {
-                                                    echo "<tr>";
-                                                    echo "<td>".$row["id"]."</td>";
-                                                    echo "<td>".$row["question"]."</td>";
-                                                    echo "<td>".$row["solution"]."</td>";
-                                                    echo "<td>";
-                                                    echo "<button>Edit</button>";
-                                                    echo "</td>";
-                                                    echo "<td>";
-                                                    echo "<button>Delete</button>";
-                                                    echo "</td>";
-                                                    echo "</tr>";
-                                                }
-                                            } else {
-                                                echo "0 results";
-                                            }
-
-                                            mysqli_close($conn);
-                                        ?>
-=======
                                             $query = "SELECT * FROM teaching";
                                             $query_run = mysqli_query($conn, $query);
 
@@ -182,7 +149,6 @@ session_start();
                                             }
                                         ?>
                                 
->>>>>>> Stashed changes
                                     </tbody>
                                 </table>
                             </div>
@@ -193,11 +159,7 @@ session_start();
                                 基本注意事項
                             </div>
                             <div class="card-body">
-<<<<<<< Updated upstream
-                                <table id="datatablesSimple">
-=======
                                 <table class="table table-striped"><!--table-bordered-->
->>>>>>> Stashed changes
                                     <thead>
                                         <tr>
                                             <th></th>
@@ -229,31 +191,6 @@ session_start();
                                             die("Connection failed: " . mysqli_connect_error());
                                             }
 
-<<<<<<< Updated upstream
-                                            $sql = "SELECT id, question, solution FROM notice";
-                                            $result = mysqli_query($conn, $sql);
-
-                                            if (mysqli_num_rows($result) > 0) {
-                                                while($row = mysqli_fetch_assoc($result)) {
-                                                    echo "<tr>";
-                                                    echo "<td>".$row["id"]."</td>";
-                                                    echo "<td>".$row["question"]."</td>";
-                                                    echo "<td>".$row["solution"]."</td>";
-                                                    echo "<td>";
-                                                    echo "<button>Edit</button>";
-                                                    echo "</td>";
-                                                    echo "<td>";
-                                                    echo "<button>Delete</button>";
-                                                    echo "</td>";
-                                                    echo "</tr>";
-                                                }
-                                            } else {
-                                                echo "0 results";
-                                            }
-
-                                            mysqli_close($conn);
-                                        ?>
-=======
                                             $query = "SELECT * FROM notice";
                                             $query_run = mysqli_query($conn, $query);
 
@@ -281,7 +218,6 @@ session_start();
                                             }
                                         ?>
 
->>>>>>> Stashed changes
                                     </tbody>
                                 </table>
                             </div>
