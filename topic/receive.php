@@ -1,11 +1,13 @@
 <?php
 session_start();
-$host = "localhost";
-$username = "root";
-$password = "root";
-$database = "chatbot";  
-
+$host = "sql12.freemysqlhosting.net";
+$username = "sql12601440";
+$password = "IS31Sl3ZXn";
+$database = "sql12601440";
+$query = "SET NAMES 'UTF8'";
+                                            
 $conn = mysqli_connect($host, $username, $password, $database);
+mysqli_query($conn, $query);
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
