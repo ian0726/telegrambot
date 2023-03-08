@@ -1,0 +1,45 @@
+ <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                               回覆紀錄
+                            </div>
+                           
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                <th>回覆</th>
+                <th>學伴名稱</th>
+                <th>回覆時間</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            
+            $mysqli = new mysqli("sql12.freemysqlhosting.net", "sql12601142", "CmxBFRJGx6", "sql12601142");
+           
+            if ($mysqli->connect_errno) {
+                echo "Failed to connect to MySQL: " . $mysqli->connect_error;
+                exit();
+            }
+            
+      
+            $sql = "SELECT chat_id, message, sender_id, sender_name, date FROM chat_log";
+            if ($result = $mysqli->query($sql)) {
+                // 取得每一筆資料，填入表格中
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row['message'] . "</td>";
+                    echo "<td>" . $row['sender_name'] . "</td>";
+                    echo "<td>" . $row['date'] . "</td>";
+                    echo "</tr>";
+                }
+               
+                $result->free();
+            }
+           
+            $mysqli->close();
+            ?>
+        </tbody>
+    </table>
+</div>
