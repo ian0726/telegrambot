@@ -1,0 +1,2705 @@
+{\rtf1\ansi\ansicpg950\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset136 PingFangTC-Regular;\f2\fnil\fcharset0 AppleColorEmoji;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww25780\viewh14160\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 var Server = "sql12.freemysqlhosting.net";\
+var Name = "sql12603359";\
+var Username = "sql12603359";\
+var Password = "7fSf6yVhTL";\
+var Port = 3306;\
+\
+function createConnection() \{\
+  var url = "jdbc:mysql://" + Server + ":" + Port + "/" + Name + "?useUnicode=true&characterEncoding=utf8";\
+  var conn = Jdbc.getConnection(url, Username, Password);\
+  var stmt = conn.createStatement();\
+  var result_a = stmt.executeQuery("SELECT * FROM teaching WHERE type = N'
+\f1 \'b1\'d0\'be\'c7\'a4\'df\'ba\'41
+\f0 '");\
+  var data_a = "";\
+  while (result_a.next()) \{\
+    data_a += "id" + ". " + result_a.getString(3) + "\\n" + result_a.getString(4) + "\\n\\n";\
+  \}\
+  for (var i = 1; i < data_a.length; i++) \{\
+    data_a = data_a.toString().replace("id", i);\
+  \}\
+  result_a.close();\
+  stmt.close();\
+  //console.log(conn)\
+  conn.close();\
+  return (data_a);\
+\}\
+function createConnection2() \{\
+  var url = "jdbc:mysql://" + Server + ":" + Port + "/" + Name + "?useUnicode=true&characterEncoding=utf8";\
+  var conn = Jdbc.getConnection(url, Username, Password);\
+  var stmt = conn.createStatement();\
+  var result_b = stmt.executeQuery("SELECT * FROM teaching WHERE type = N'
+\f1 \'b1\'d0\'be\'c7\'a7\'de\'a5\'a9
+\f0 '");\
+  // Retrieve data from the database\
+  var data_b = "";\
+  while (result_b.next()) \{\
+    data_b += "id" + ". " + result_b.getString(3) + "\\n" + result_b.getString(4) + "\\n\\n";\
+  \}\
+  for (var i = 1; i < data_b.length; i++) \{\
+    data_b = data_b.toString().replace("id", i);\
+  \}\
+  result_b.close();\
+  stmt.close();\
+  conn.close();\
+  return (data_b);\
+\}\
+function createConnection3() \{\
+  var url = "jdbc:mysql://" + Server + ":" + Port + "/" + Name + "?useUnicode=true&characterEncoding=utf8";\
+  var conn = Jdbc.getConnection(url, Username, Password);\
+  var stmt = conn.createStatement();\
+  var result_c = stmt.executeQuery("SELECT * FROM teaching WHERE type = N'
+\f1 \'b1\'d0\'be\'c7\'a4\'e8\'a6\'a1
+\f0 '");\
+  // Retrieve data from the database\
+  var data_c = "";\
+  while (result_c.next()) \{\
+    data_c += "id" + ". " + result_c.getString(3) + "\\n" + result_c.getString(4) + "\\n\\n";\
+  \}\
+  for (var i = 1; i < data_c.length; i++) \{\
+    data_c = data_c.toString().replace("id", i);\
+  \}\
+  result_c.close();\
+  stmt.close();\
+  conn.close();\
+  return (data_c);\
+\}\
+function createConnection4() \{\
+  var url = "jdbc:mysql://" + Server + ":" + Port + "/" + Name + "?useUnicode=true&characterEncoding=utf8";\
+  var conn = Jdbc.getConnection(url, Username, Password);\
+  var stmt = conn.createStatement();\
+  var result2 = stmt.executeQuery("SELECT * FROM notice");\
+  var data2 = "";\
+  while (result2.next()) \{\
+    data2 += result2.getString(1) + ". " + result2.getString(2) + "\\n" + result2.getString(3) + "\\n\\n";\
+  \}\
+  result2.close();\
+  stmt.close();\
+  conn.close();\
+  return (data2);\
+\}\
+function createConnection5() \{\
+  var url = "jdbc:mysql://" + Server + ":" + Port + "/" + Name + "?useUnicode=true&characterEncoding=utf8";\
+  var conn = Jdbc.getConnection(url, Username, Password);\
+  var stmt = conn.createStatement();\
+  var result3 = stmt.executeQuery("SELECT * FROM contact");\
+  var data3 = "";\
+  while (result3.next()) \{\
+    data3 += "
+\f1 \'c1\'70\'b5\'b8\'a4\'48\'a1\'47
+\f0 " + result3.getString(2) + "\\n" + "
+\f1 \'b9\'71\'a4\'6c\'ab\'48\'bd\'63\'a1\'47
+\f0 " + result3.getString(3) + "\\n" + "LINE ID
+\f1 \'a1\'47
+\f0 " + result3.getString(4) + "\\n" + "
+\f1 \'a4\'e2\'be\'f7\'b8\'b9\'bd\'58\'a1\'47
+\f0 " + result3.getString(5) + "\\n\\n";\
+    //console.log(data1);\
+  \}\
+  result3.close();\
+  stmt.close();\
+  conn.close();\
+  return (data3);\
+\}\
+function createConnection6() \{\
+  var url = "jdbc:mysql://" + Server + ":" + Port + "/" + Name + "?useUnicode=true&characterEncoding=utf8";\
+  var conn = Jdbc.getConnection(url, Username, Password);\
+  var stmt = conn.createStatement();\
+  var result_v = stmt.executeQuery("SELECT * FROM video ORDER BY RAND() LIMIT 1");\
+  var data_v = "";\
+  while (result_v.next()) \{\
+    data_v += result_v.getString(2) + "\\n\\n";\
+  \}\
+  result_v.close();\
+  stmt.close();\
+  conn.close();\
+  return (data_v);\
+\}\
+function createConnection7() \{\
+  var url = "jdbc:mysql://" + Server + ":" + Port + "/" + Name + "?useUnicode=true&characterEncoding=utf8";\
+  var conn = Jdbc.getConnection(url, Username, Password);\
+  var stmt = conn.createStatement();\
+  var result_ar = stmt.executeQuery("SELECT * FROM article ORDER BY RAND() LIMIT 1");\
+  var data_ar = "";\
+  while (result_ar.next()) \{\
+    data_ar += result_ar.getString(2) + "\\n\\n";\
+  \}\
+  result_ar.close();\
+  stmt.close();\
+  conn.close();\
+  return (data_ar);\
+\}\
+\
+function sendBroadcastMessage() \{\
+  var message = '
+\f2 \uc0\u10071 \u65039 
+\f1 \'b0\'4f\'b1\'6f\'c3\'ba\'a5\'e6\'b1\'d0\'be\'c7\'a4\'e9\'bb\'78
+\f2 \uc0\u10071 \u65039 
+\f0 ';\
+  var conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+  var stmt = conn.createStatement();\
+  var rs = stmt.executeQuery("SELECT DISTINCT chat_id FROM chat_log"); //stu_name\
+\
+  while (rs.next()) \{\
+    var chatId = rs.getString("chat_id");\
+    var apiUrl = 'https://api.telegram.org/bot5793897805:AAE8V1NUk4N-9y0-lhBTEe2j3BN7d-MKZjM/sendMessage?chat_id=' + chatId + '&text=' + encodeURIComponent(message);\
+\
+    UrlFetchApp.fetch(apiUrl); //, options=\{muteHttpExceptions: true\}\
+  \}\
+\
+  rs.close();\
+  stmt.close();\
+  conn.close();\
+\}\
+\
+function doPost(e) \{\
+  var body = JSON.parse(e.postData.contents);\
+\
+  var chat = JSON.parse(e.postData.contents);\
+  // 
+\f1 \'ac\'4f\'a4\'e5\'a6\'72\'ae\'e6\'a6\'a1\'ae\'c9
+\f0 \
+  if (chat.message) \{\
+    // 
+\f1 \'a6\'73\'a8\'cf\'a5\'ce\'aa\'cc
+\f0  id\
+    var id = chat.message.from.id;\
+    // 
+\f1 \'a6\'73\'a8\'cf\'a5\'ce\'aa\'cc\'aa\'ba\'b0\'54\'ae\'a7
+\f0 \
+    var message = chat.message.text;\
+    // 
+\f1 \'b3\'d0\'ab\'d8
+\f0  ISO 8601 
+\f1 \'ae\'e6\'a6\'a1\'aa\'ba\'ae\'c9\'b6\'a1\'c2\'57\'b0\'4f
+\f0 \
+    var timestamp = new Date().toISOString();\
+    pushData('/user/' + id + '/message', \{\
+      message: message,\
+      timestamp: timestamp\
+    \});\
+  \}\
+\
+  var payload = preparePayload(body);\
+  var data = \{\
+    "method": "post",\
+    "contentType": 'application/json',\
+    "payload": JSON.stringify(payload),\
+  \}\
+\
+  UrlFetchApp.fetch("https://api.telegram.org/bot5793897805:AAE8V1NUk4N-9y0-lhBTEe2j3BN7d-MKZjM/", data);\
+\}\
+\
+function start(payload) \{\
+  var data = \{\
+    "method": "post",\
+    "payload": payload\
+  \}\
+  var d = new Date();\
+  var SpreadSheet = SpreadsheetApp.openById("1r7GEbnk5vjOz-3K3O8PqCyc-rBCsF1DYjC11vcE10c0");\
+  var Sheet = SpreadSheet.getSheetByName("
+\f1 \'a4\'75\'a7\'40\'aa\'ed
+\f0 1");\
+  var LastRow = Sheet.getLastRow();\
+  Sheet.getRange(LastRow + 1, 1).setValue(d);\
+  Sheet.getRange(LastRow + 1, 3).setValue(data);\
+  UrlFetchApp.fetch("https://api.telegram.org/bot5793897805:AAE8V1NUk4N-9y0-lhBTEe2j3BN7d-MKZjM/", data);\
+  Sheet.getRange(LastRow + 1, 2).setValue(d);\
+\}\
+\
+function getName(user) \{\
+  var name = user.first_name\
+  if (user.last_name) \{\
+    name += " " + user.last_name;\
+  \}\
+  return name;\
+\}\
+\
+function escapeMarkDown(toEscapeMsg) \{\
+  var escapedMsg = toEscapeMsg\
+    .replace(/_/g, "\\\\_")\
+    .replace(/\\*/g, "\\\\*")\
+    .replace(/\\[/g, "\\\\[")\
+    .replace(/`/g, "\\\\`");\
+  return escapedMsg;\
+\
+\}\
+\
+function getMentionName(user) \{\
+  var username = user.username;\
+  var mentionName = "";\
+\
+  var name = getName(user);\
+  if (!name) \{\
+    name = "
+\f1 \'af\'ab\'af\'b5\'a4\'48
+\f0 ";\
+  \}\
+\
+  // if (!username) \{\
+  mentionName = getMarkDownUserUrl(escapeMarkDown(name), user.id);\
+  // \} else \{\
+  //   mentionName = "[" + escapeMarkDown(name) + "](@" + escapeMarkDown(username) + ")";\
+  // \}\
+\
+  return mentionName;\
+\}\
+\
+function getMarkDownUserUrl(userName, userId) \{\
+  return "[" + userName + "](tg://user?id=" + userId + ")";\
+\}\
+\
+//
+\f1 \'a6\'5e\'c1\'6e\'a5\'5c\'af\'e0
+\f0 \
+function preparePayload(body) \{\
+  var payload;\
+\
+  if (body.message) \{\
+    body.message.chat.id = body.message.chat.id + '';\
+  \}\
+\
+  if (body.callback_query) \{\
+    payload = \{\
+      "method": "sendMessage",\
+      "chat_id": body.callback_query.message.chat.id,\
+      "text": "",\
+      "parse_mode": "Markdown",\
+      "disable_web_page_preview": false,\
+    \};\
+\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'bd\'d0\'bf\'ef\'be\'dc\'b1\'7a\'b7\'51\'ad\'6e\'be\'c7\'b2\'df\'aa\'ba
+\f0 *
+\f1 \'b1\'d0\'be\'c7
+\f0 *
+\f1 \'a4\'ba\'ae\'65
+\f0 ",\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "
+\f1 \'b1\'d0\'be\'c7\'a4\'df\'ba\'41
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a4\'df\'ba\'41\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "
+\f1 \'b1\'d0\'be\'c7\'a7\'de\'a5\'a9
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a7\'de\'a5\'a9\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow3 = [];\
+      var keyboardButton3 = \{\
+        text: "
+\f1 \'b1\'d0\'be\'c7\'a4\'e8\'a6\'a1
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a4\'e8\'a6\'a1\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow4 = [];\
+      var keyboardButton4 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b0\'56\'bd\'6d\'b8\'ea\'b0\'54\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow.push(keyboardButton1);\
+      keyboardRow2.push(keyboardButton2);\
+      keyboardRow3.push(keyboardButton3);\
+      keyboardRow4.push(keyboardButton4);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow3);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow4);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      //payload.text = "
+\f1 \'ad\'ec\'ae\'f8\'ae\'a7\'b3\'51\'a7\'f3\'b7\'73\'a4\'46
+\f0 ";\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a4\'df\'ba\'41\'a1\'76
+\f0 ") === 0) \{\
+      var data_a = createConnection();\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "*
+\f1 \'b1\'d0\'be\'c7
+\f0  - 
+\f1 \'b1\'d0\'be\'c7\'a4\'df\'ba\'41
+\f0 *\\n\\n" + data_a,\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      //payload.text = "*
+\f1 \'b0\'56\'bd\'6d\'b8\'ea\'b0\'54
+\f0  - 
+\f1 \'b0\'f2\'a5\'bb\'aa\'60\'b7\'4e\'a8\'c6\'b6\'b5
+\f0 *\\n\\n" + data2;\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a7\'de\'a5\'a9\'a1\'76
+\f0 ") === 0) \{\
+      var data_b = createConnection2();\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "*
+\f1 \'b1\'d0\'be\'c7
+\f0  - 
+\f1 \'b1\'d0\'be\'c7\'a7\'de\'a5\'a9
+\f0 *\\n\\n" + data_b,\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      //payload.text = "*
+\f1 \'b0\'56\'bd\'6d\'b8\'ea\'b0\'54
+\f0  - 
+\f1 \'b0\'f2\'a5\'bb\'aa\'60\'b7\'4e\'a8\'c6\'b6\'b5
+\f0 *\\n\\n" + data2;\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a4\'e8\'a6\'a1\'a1\'76
+\f0 ") === 0) \{\
+      var data_c = createConnection3();\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "*
+\f1 \'b1\'d0\'be\'c7
+\f0  - 
+\f1 \'b1\'d0\'be\'c7\'a4\'e8\'a6\'a1
+\f0 *\\n\\n" + data_c,\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      //payload.text = "*
+\f1 \'b0\'56\'bd\'6d\'b8\'ea\'b0\'54
+\f0  - 
+\f1 \'b0\'f2\'a5\'bb\'aa\'60\'b7\'4e\'a8\'c6\'b6\'b5
+\f0 *\\n\\n" + data2;\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'b0\'56\'bd\'6d\'b8\'ea\'b0\'54\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'bd\'d0\'bf\'ef\'be\'dc\'b1\'7a\'ad\'6e\'be\'c7\'b2\'df\'aa\'ba\'b6\'b5\'a5\'d8
+\f0 \\n",\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "
+\f1 \'b1\'d0\'be\'c7
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton2 = \{\
+        text: "
+\f1 \'b0\'f2\'a5\'bb\'aa\'60\'b7\'4e\'a8\'c6\'b6\'b5
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b0\'f2\'a5\'bb\'aa\'60\'b7\'4e\'a8\'c6\'b6\'b5\'a1\'76
+\f0 "\
+      \};\
+\
+      var keyboardRow2 = [];\
+      var keyboardButton3 = \{\
+        text: "
+\f1 \'ac\'db\'c3\'f6\'b1\'d0\'be\'c7\'bc\'76\'a4\'f9
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 video
+\f1 \'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton4 = \{\
+        text: "
+\f1 \'ac\'db\'c3\'f6\'b1\'d0\'be\'c7\'a4\'e5\'b3\'b9
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 article
+\f1 \'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      keyboardRow.push(keyboardButton2);\
+\
+      keyboardRow2.push(keyboardButton3); //
+\f1 \'b1\'71\'a6\'e6\'b8\'cc\'b1\'c0\'b6\'69\'c1\'e4\'bd\'4c
+\f0 \
+      keyboardRow2.push(keyboardButton4);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'b0\'f2\'a5\'bb\'aa\'60\'b7\'4e\'a8\'c6\'b6\'b5\'a1\'76
+\f0 ") === 0) \{\
+      var data2 = createConnection4();\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "*
+\f1 \'b0\'56\'bd\'6d\'b8\'ea\'b0\'54
+\f0  - 
+\f1 \'b0\'f2\'a5\'bb\'aa\'60\'b7\'4e\'a8\'c6\'b6\'b5
+\f0 *\\n\\n" + data2,\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      //payload.text = "*
+\f1 \'b0\'56\'bd\'6d\'b8\'ea\'b0\'54
+\f0  - 
+\f1 \'b0\'f2\'a5\'bb\'aa\'60\'b7\'4e\'a8\'c6\'b6\'b5
+\f0 *\\n\\n" + data2;\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b0\'56\'bd\'6d\'b8\'ea\'b0\'54\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'bb\'50\'a8\'f3\'b7\'7c\'c1\'70\'b5\'b8\'a1\'76
+\f0 ") === 0) \{\
+      var data3 = createConnection5();\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "*
+\f1 \'c1\'70\'b5\'b8\'b8\'ea\'b0\'54
+\f0 *\\n\\n" + data3,\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a7\'f3\'a6\'68\'b8\'ea\'b0\'54\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'a7\'f3\'a6\'68\'b8\'ea\'b0\'54\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'a5\'78\'c6\'57\'a7\'c6\'b1\'e6\'b3\'a1\'b8\'a8\'a8\'f3\'b7\'7c\'ac\'db\'c3\'f6\'b8\'ea\'b0\'54
+\f0 ",\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "facebook",\
+        url: "https://www.facebook.com/ihopetw/?locale=zh_TW"\
+      \};\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "
+\f1 \'c1\'70\'b5\'b8\'b8\'ea\'b0\'54
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'bb\'50\'a8\'f3\'b7\'7c\'c1\'70\'b5\'b8\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      keyboardRow2.push(keyboardButton2);\
+\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'a6\'5e\'b3\'f8\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'bd\'d0\'bf\'ef\'be\'dc\'b1\'7a\'ad\'6e\'a6\'5e\'b3\'f8\'aa\'ba\'b6\'b5\'a5\'d8
+\f0 \\n",\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "
+\f1 \'b5\'fb\'a6\'f4\'be\'c7\'a5\'cd\'a4\'57\'bd\'d2\'aa\'ed\'b2\'7b
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b5\'fb\'a6\'f4\'be\'c7\'a5\'cd\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "
+\f1 \'b1\'d0\'be\'c7\'a4\'e9\'bb\'78\'a6\'5e\'b3\'f8
+\f0 ",\
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSeZ9YNGR8FCKKHH3DiOch61-BQxn-8Moor86Zo6abzGYbevGg/viewform?usp=sf_link"\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      keyboardRow2.push(keyboardButton2);\
+\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 video
+\f1 \'a1\'76
+\f0 ") === 0) \{\
+      var data_v = createConnection6();\
+      payload.text = data_v;\
+      payload.disable_web_page_preview = false;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 article
+\f1 \'a1\'76
+\f0 ") === 0) \{\
+      var data_ar = createConnection7();\
+      payload.text = data_ar;\
+      payload.disable_web_page_preview = false;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'b5\'fb\'a6\'f4\'be\'c7\'a5\'cd\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'bd\'d0\'ae\'da\'be\'da\'be\'c7\'a5\'cd\'a4\'57\'bd\'d2\'aa\'ac\'aa\'70\'b6\'69\'a6\'e6\'b5\'fb\'a4\'c0
+\f2 \uc0\u10024 
+\f0 \\n" + "
+\f1 \'a1\'5d\'a7\'43
+\f2 \uc0\u10145 \u65039 
+\f1 \'b0\'aa\'a1\'5e
+\f0 ",\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "1 
+\f2 \uc0\u55356 \u57119 
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 1
+\f1 \'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton2 = \{\
+        text: "2 
+\f2 \uc0\u55356 \u57119 
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 2
+\f1 \'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton3 = \{\
+        text: "3 
+\f2 \uc0\u55356 \u57119 
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 3
+\f1 \'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton4 = \{\
+        text: "4 
+\f2 \uc0\u55356 \u57119 
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 4
+\f1 \'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton5 = \{\
+        text: "5 
+\f2 \uc0\u55356 \u57119 
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 5
+\f1 \'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow2 = [];\
+      var keyboardButton6 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a6\'5e\'b3\'f8\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1);\
+      keyboardRow.push(keyboardButton2);\
+      keyboardRow.push(keyboardButton3);\
+      keyboardRow.push(keyboardButton4);\
+      keyboardRow.push(keyboardButton5);\
+      keyboardRow2.push(keyboardButton6);//
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 1
+\f1 \'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'a4\'77\'a6\'ac\'a8\'ec\'be\'c7\'a6\'f1\'aa\'ac\'aa\'70\'a6\'5e\'c2\'d0\'a1\'49\'af\'75\'aa\'ba\'a8\'af\'ad\'57\'a4\'46\'a1\'49\'a7\'da\'ad\'cc\'b7\'7c\'b3\'71\'aa\'be\'ae\'61\'aa\'f8\'aa\'60\'b7\'4e\'be\'c7\'a6\'f1\'aa\'ac\'aa\'70\'a1\'41\'a4\'40\'b0\'5f\'a7\'ef\'b6\'69\'a1\'49
+\f0 \\n",\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      var messageDate = new Date(); // 
+\f1 \'c0\'f2\'a8\'fa\'b7\'ed\'ab\'65\'a4\'e9\'b4\'c1\'a9\'4d\'ae\'c9\'b6\'a1
+\f0 \
+      // 
+\f1 \'b1\'4e\'ae\'f8\'ae\'a7\'b0\'4f\'bf\'fd\'a8\'ec
+\f0 MySQL
+\f1 \'bc\'c6\'be\'da\'ae\'77
+\f0 \
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO scores (chat_id, score, date) VALUES (?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      //stmt.setString(2, body.callback_query.message.from.first_name);\
+      stmt.setString(2, "1");\
+      stmt.setString(3, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss")); // 
+\f1 \'ae\'e6\'a6\'a1\'a4\'c6\'a4\'e9\'b4\'c1\'ae\'c9\'b6\'a1\'ac\'b0
+\f0 MySQL
+\f1 \'ae\'e6\'a6\'a1
+\f0 \
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a6\'5e\'b3\'f8\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 2
+\f1 \'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'a4\'77\'a6\'ac\'a8\'ec\'be\'c7\'a6\'f1\'aa\'ac\'aa\'70\'a6\'5e\'c2\'d0\'a1\'49\'a8\'af\'ad\'57\'a4\'46\'a1\'49\'a4\'b5\'a4\'d1\'be\'c7\'a6\'f1\'aa\'ac\'aa\'70\'a5\'69\'af\'e0\'a8\'53\'a8\'ba\'bb\'f2\'a6\'6e\'a1\'41\'a6\'70\'a6\'b3\'bb\'dd\'ad\'6e\'a7\'da\'ad\'cc\'b7\'7c\'b3\'71\'aa\'be\'ae\'61\'aa\'f8\'aa\'60\'b7\'4e\'a1\'49
+\f0 \\n",\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      var messageDate = new Date();\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO scores (chat_id, score, date) VALUES (?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "2");\
+      stmt.setString(3, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a6\'5e\'b3\'f8\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 3
+\f1 \'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'a4\'77\'a6\'ac\'a8\'ec\'be\'c7\'a6\'f1\'aa\'ac\'aa\'70\'a6\'5e\'c2\'d0\'a1\'49\'a4\'a3\'bf\'f9\'b3\'e1\'a1\'e3\'a4\'b5\'a4\'d1\'b0\'74\'a6\'58\'aa\'ba\'c0\'b3\'b8\'d3\'c1\'d9\'a5\'69\'a5\'48\'a7\'61\'a1\'49
+\f0 \\n",\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      var messageDate = new Date();\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO scores (chat_id, score, date) VALUES (?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "3");\
+      stmt.setString(3, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a6\'5e\'b3\'f8\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 4
+\f1 \'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'a4\'77\'a6\'ac\'a8\'ec\'be\'c7\'a6\'f1\'aa\'ac\'aa\'70\'a6\'5e\'c2\'d0\'a1\'49\'ab\'dc\'a6\'6e\'a1\'49\'ae\'74\'a4\'40\'c2\'49\'b4\'4e\'a7\'b9\'ac\'fc\'a4\'46\'a1\'49\'b8\'f2\'be\'c7\'a6\'f1\'a6\'41\'a6\'68\'a6\'68\'bf\'69\'a6\'58\'a1\'49\'a5\'5b\'aa\'6f\'a1\'49
+\f0 \\n",\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      var messageDate = new Date();\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO scores (chat_id, score, date) VALUES (?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "4");\
+      stmt.setString(3, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a6\'5e\'b3\'f8\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 5
+\f1 \'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'a4\'d3\'b4\'ce\'a4\'46\'a1\'49
+\f0 Wonderful ~
+\f1 \'c4\'7e\'c4\'f2\'ab\'4f\'ab\'f9\'a4\'55\'a5\'68\'a1\'49\'a5\'5b\'aa\'6f\'a5\'5b\'aa\'6f\'a1\'49
+\f0 \\n",\
+        "parse_mode": "markdown",\
+        "disable_web_page_preview": false,\
+      \};\
+      var messageDate = new Date();\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO scores (chat_id, score, date) VALUES (?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "5");\
+      stmt.setString(3, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a6\'5e\'b3\'f8\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'c5\'77\'aa\'ef\'b4\'a3\'a8\'d1\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'41\'bd\'d0\'bf\'ef\'be\'dc\'b1\'7a\'b7\'51\'ad\'6e\'b4\'a3\'a8\'d1\'aa\'ba\'a6\'5e\'f5\'58\'c3\'fe\'a7\'4f\'a1\'47
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "
+\f1 \'be\'e3\'c5\'e9\'a5\'5c\'af\'e0
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'be\'e3\'c5\'e9\'a5\'5c\'af\'e0\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "
+\f1 \'a8\'cf\'a5\'ce\'ac\'79\'ba\'5a\'ab\'d7
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'ac\'79\'ba\'5a\'ab\'d7\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow3 = [];\
+      var keyboardButton3 = \{\
+        text: "
+\f1 \'ac\'b0\'be\'f7\'be\'b9\'a4\'48\'b5\'fb\'a4\'c0
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'ac\'b0\'be\'f7\'be\'b9\'a4\'48\'b5\'fb\'a4\'c0\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow4 = [];\
+      var keyboardButton4 = \{\
+        text: "
+\f1 \'a8\'e4\'a5\'4c
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'e4\'a5\'4c\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      keyboardRow2.push(keyboardButton2);\
+      keyboardRow3.push(keyboardButton3);\
+      keyboardRow4.push(keyboardButton4);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow3);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow4);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'be\'e3\'c5\'e9\'a5\'5c\'af\'e0\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'bd\'d0\'b9\'ef\'be\'e3\'c5\'e9\'a5\'5c\'af\'e0\'b6\'69\'a6\'e6\'b5\'fb\'a6\'f4\'a1\'47
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "
+\f1 \'a5\'5c\'af\'e0\'a4\'a3\'a8\'ac
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a5\'5c\'af\'e0\'a4\'a3\'a8\'ac\'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton2 = \{\
+        text: "
+\f1 \'a5\'5c\'af\'e0\'bb\'f4\'a5\'fe
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a5\'5c\'af\'e0\'bb\'f4\'a5\'fe\'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton3 = \{\
+        text: "
+\f1 \'b9\'4c\'a9\'f3\'c1\'63\'ba\'be\'c2\'f8\'b6\'c3
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b9\'4c\'a9\'f3\'c1\'63\'ba\'be\'c2\'f8\'b6\'c3\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow2 = [];\
+      var keyboardButton4 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow.push(keyboardButton1);\
+      keyboardRow.push(keyboardButton2);\
+      keyboardRow.push(keyboardButton3);\
+      keyboardRow2.push(keyboardButton4);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'a5\'5c\'af\'e0\'a4\'a3\'a8\'ac\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var messageDate = new Date()\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "
+\f1 \'a5\'5c\'af\'e0\'a4\'a3\'a8\'ac
+\f0 ");\
+      stmt.setString(3, "null");\
+      stmt.setString(4, "null");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow2.push(keyboardButton2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'a5\'5c\'af\'e0\'bb\'f4\'a5\'fe\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var messageDate = new Date()\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "
+\f1 \'a5\'5c\'af\'e0\'bb\'f4\'a5\'fe
+\f0 ");\
+      stmt.setString(3, "null");\
+      stmt.setString(4, "null");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow2.push(keyboardButton2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'b9\'4c\'a9\'f3\'c1\'63\'ba\'be\'c2\'f8\'b6\'c3\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var messageDate = new Date()\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "
+\f1 \'b9\'4c\'a9\'f3\'c1\'63\'ba\'be\'c2\'f8\'b6\'c3
+\f0 ");\
+      stmt.setString(3, "null");\
+      stmt.setString(4, "null");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow2.push(keyboardButton2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'ac\'79\'ba\'5a\'ab\'d7\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'bd\'d0\'b9\'ef\'a8\'cf\'a5\'ce\'ac\'79\'ba\'5a\'ab\'d7\'b6\'69\'a6\'e6\'b5\'fb\'a6\'f4\'a1\'47
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "
+\f1 \'a6\'b3\'a8\'c7\'b2\'56\'b6\'c3\'a1\'41\'a7\'e4\'a4\'a3\'a8\'ec\'b7\'51\'a8\'cf\'a5\'ce\'aa\'ba\'a5\'5c\'af\'e0
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a6\'b3\'a8\'c7\'b2\'56\'b6\'c3\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "
+\f1 \'b4\'b6\'b3\'71\'a1\'41\'a4\'6a\'ad\'50\'a4\'57\'b3\'a3\'c1\'d9\'a4\'a3\'bf\'f9
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b4\'b6\'b3\'71\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow3 = [];\
+      var keyboardButton3 = \{\
+        text: "
+\f1 \'ab\'dc\'ba\'a1\'b7\'4e\'a1\'41\'a4\'40\'a4\'55\'b4\'4e\'af\'e0\'a4\'57\'a4\'e2
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'ab\'dc\'ba\'a1\'b7\'4e\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow5 = [];\
+      var keyboardButton5 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow.push(keyboardButton1);\
+      keyboardRow2.push(keyboardButton2);\
+      keyboardRow3.push(keyboardButton3);\
+      keyboardRow5.push(keyboardButton5);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow3);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow5);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'a6\'b3\'a8\'c7\'b2\'56\'b6\'c3\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var messageDate = new Date()\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "null");\
+      stmt.setString(3, "
+\f1 \'a6\'b3\'a8\'c7\'b2\'56\'b6\'c3\'a1\'41\'a7\'e4\'a4\'a3\'a8\'ec\'b7\'51\'a8\'cf\'a5\'ce\'aa\'ba\'a5\'5c\'af\'e0
+\f0 ");\
+      stmt.setString(4, "null");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow2.push(keyboardButton2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'b4\'b6\'b3\'71\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var messageDate = new Date()\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "null");\
+      stmt.setString(3, "
+\f1 \'b4\'b6\'b3\'71\'a1\'41\'a4\'6a\'ad\'50\'a4\'57\'b3\'a3\'c1\'d9\'a4\'a3\'bf\'f9
+\f0 ");\
+      stmt.setString(4, "null");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow2.push(keyboardButton2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'ab\'dc\'ba\'a1\'b7\'4e\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var messageDate = new Date()\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "null");\
+      stmt.setString(3, "
+\f1 \'ab\'dc\'ba\'a1\'b7\'4e\'a1\'41\'a4\'40\'a4\'55\'b4\'4e\'af\'e0\'a4\'57\'a4\'e2
+\f0 ");\
+      stmt.setString(4, "null");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow2.push(keyboardButton2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'ac\'b0\'be\'f7\'be\'b9\'a4\'48\'b5\'fb\'a4\'c0\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'bd\'d0\'b9\'ef\'a8\'cf\'a5\'ce\'be\'f7\'be\'b9\'a4\'48\'ab\'e1\'aa\'ba\'be\'e3\'c5\'e9\'b7\'50\'a8\'fc\'b6\'69\'a6\'e6\'b5\'fb\'a4\'c0\'a1\'47
+\f0 \\n" + "
+\f1 \'a1\'5d\'a7\'43
+\f2 \uc0\u10145 \u65039 
+\f1 \'b0\'aa\'a1\'5e
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "1
+\f1 \'a4\'c0
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 1
+\f1 \'a4\'c0\'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton2 = \{\
+        text: "2
+\f1 \'a4\'c0
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 2
+\f1 \'a4\'c0\'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton3 = \{\
+        text: "3
+\f1 \'a4\'c0
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 3
+\f1 \'a4\'c0\'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton4 = \{\
+        text: "4
+\f1 \'a4\'c0
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 4
+\f1 \'a4\'c0\'a1\'76
+\f0 "\
+      \};\
+      var keyboardButton5 = \{\
+        text: "5
+\f1 \'a4\'c0
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75
+\f0 5
+\f1 \'a4\'c0\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow3 = [];\
+      var keyboardButton7 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow.push(keyboardButton1);\
+      keyboardRow.push(keyboardButton2);\
+      keyboardRow.push(keyboardButton3);\
+      keyboardRow.push(keyboardButton4);\
+      keyboardRow.push(keyboardButton5);\
+      keyboardRow3.push(keyboardButton7);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow3);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 1
+\f1 \'a4\'c0\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var messageDate = new Date();\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "null");\
+      stmt.setString(3, "null");\
+      stmt.setString(4, "1
+\f1 \'a4\'c0
+\f0 ");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow2.push(keyboardButton2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 2
+\f1 \'a4\'c0\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var messageDate = new Date();\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "null");\
+      stmt.setString(3, "null");\
+      stmt.setString(4, "2
+\f1 \'a4\'c0
+\f0 ");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow2.push(keyboardButton2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 3
+\f1 \'a4\'c0\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var messageDate = new Date();\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "null");\
+      stmt.setString(3, "null");\
+      stmt.setString(4, "3
+\f1 \'a4\'c0
+\f0 ");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow2.push(keyboardButton2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 4
+\f1 \'a4\'c0\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var messageDate = new Date();\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "null");\
+      stmt.setString(3, "null");\
+      stmt.setString(4, "4
+\f1 \'a4\'c0
+\f0 ");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow2.push(keyboardButton2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75
+\f0 5
+\f1 \'a4\'c0\'a1\'76
+\f0 ") === 0) \{\
+      payload = \{\
+        "method": "editMessageText",\
+        "chat_id": body.callback_query.message.chat.id,\
+        "message_id": body.callback_query.message.message_id,\
+        "text": "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ",\
+        "parse_mode": "markdown",\
+      \};\
+      var messageDate = new Date();\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.callback_query.message.chat.id);\
+      stmt.setString(2, "null");\
+      stmt.setString(3, "null");\
+      stmt.setString(4, "5
+\f1 \'a4\'c0
+\f0 ");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "\'ab 
+\f1 \'a4\'57\'a4\'40\'ad\'b6
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow2.push(keyboardButton2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.callback_query.data.indexOf("
+\f1 \'a1\'75\'a8\'e4\'a5\'4c\'a1\'76
+\f0 ") === 0) \{\
+      payload.text = "
+\f1 \'a8\'e4\'a5\'4c\'a1\'47
+\f0 ";\
+      var force = \{\};\
+      force.force_reply = true;\
+      payload.reply_markup = force;\
+      return payload;\
+    \}\
+    return payload;\
+  \}\
+  //
+\f1 \'a6\'b3\'a4\'48\'a5\'5b\'a4\'4a
+\f0 \
+  if (body.message.new_chat_member) \{\
+    payload = \{\
+      "method": "sendMessage",\
+      "chat_id": body.message.chat.id,\
+      "text": "
+\f1 \'a7\'41\'a6\'6e\'a1\'41\'c5\'77\'aa\'ef\'a5\'5b\'a4\'4a\'a1\'43
+\f0 ",\
+      "parse_mode": "MarkdownV2",  //
+\f1 \'b3\'cc\'ab\'e1\'a4\'40\'a6\'e6\'a1\'41\'a5\'69\'a5\'5b\'a5\'69\'a4\'a3\'a5\'5b
+\f0  //
+\f1 \'a7\'ef\'c5\'dc\'a6\'72\'c5\'e9\'ae\'e6\'a6\'a1
+\f0 \
+      "disable_web_page_preview": true, //
+\f1 \'ba\'f4\'ad\'b6\'b9\'77\'c4\'fd
+\f0 \
+    \}\
+    payload.text = "
+\f1 \'a7\'41\'a6\'6e
+\f0 " + getMentionName(body.message.new_chat_member) + "
+\f1 \'a1\'41\'c5\'77\'aa\'ef\'a5\'5b\'a4\'4a\'a1\'43
+\f0 ";\
+    return payload;\
+  \}\
+  //
+\f1 \'a6\'b3\'a4\'48\'c2\'f7\'b6\'7d
+\f0 \
+  if (body.message.left_chat_member) \{\
+    payload = \{\
+      "method": "sendMessage",\
+      "chat_id": body.message.chat.id,\
+      "text": "
+\f1 \'a7\'41\'a6\'6e\'a1\'41
+\f0  
+\f1 \uc0\u27426 \'aa\'ef\'a5\'5b\'a4\'4a\'a5\'bb\'b8\'73
+\f0 ",\
+      "parse_mode": "Markdown",\
+      "disable_web_page_preview": true,\
+    \}\
+    payload.text = getMentionName(body.message.left_chat_member) + "
+\f1 \'a6\'41\'a8\'a3\'a1\'49
+\f0 ";\
+    return payload;\
+  \}\
+  //
+\f1 \'b8\'6d\'b3\'bb\'ae\'f8\'ae\'a7
+\f0 \
+  if (body.message.pinned_message) \{\
+    payload = \{\
+      "method": "sendMessage",\
+      "chat_id": body.message.chat.id,\
+      "text": "
+\f1 \'a7\'41\'a6\'6e\'a1\'41
+\f0  
+\f1 \uc0\u27426 \'aa\'ef\'a5\'5b\'a4\'4a\'a5\'bb\'b8\'73
+\f0 ",\
+      "parse_mode": "Markdown",\
+      "disable_web_page_preview": true,\
+    \}\
+    var whoPinned = getName(body.message.from);\
+    var whoOwned = getName(body.message.pinned_message.from);\
+\
+    payload.text = whoPinned + "
+\f1 \'b8\'6d\uc0\u39030 \'a4\'46\'ae\'f8\'ae\'a7
+\f0 :\\n\\n" + body.message.pinned_message.text\
+      + "\\n\\n"\
+      + "
+\f1 \'a5\'bb
+\f0 BOT
+\f1 \'a5\'4e\'aa\'ed
+\f0 " + whoOwned + "
+\f1 \'b7\'50\uc0\u35874 \'b1\'7a
+\f0 "\
+      ;\
+    return payload;\
+  \}\
+\
+  body.message.text = body.message.text.toLowerCase(); //
+\f1 \'a4\'70\'bc\'67
+\f0 \
+  body.message.text = body.message.text.replace(/@chatbot/g, ''); //
+\f1 \'b2\'4d\'b0\'a3\'be\'f7\'be\'b9\'a4\'48\'a6\'57\'a6\'72
+\f0 \
+\
+  var paras = body.message.text.trim().split(" "); //
+\f1 \'a5\'ce\'aa\'c5\'ae\'e6\'a4\'c0\'b6\'7d
+\f0 \
+  // remove empty strings\
+  paras = paras.filter(function (para) \{\
+    if (para) \{\
+      return true;\
+    \}\
+  \});\
+  if (body.message.text) \{\
+    payload = \{\
+      "method": "sendMessage",\
+      "chat_id": body.message.chat.id,\
+      //"text": "
+\f1 \'b1\'7a\'a6\'6e\'a1\'41\'bd\'d0\'c2\'49\'c0\'bb\'a4\'55\'a6\'43\'bf\'ef\'b6\'b5\'ac\'64\'ac\'dd\'a4\'ba\'ae\'65\'a1\'43
+\f0 ",\
+      "parse_mode": "MarkdownV2",  //
+\f1 \'b3\'cc\'ab\'e1\'a4\'40\'a6\'e6\'a1\'41\'a5\'69\'a5\'5b\'a5\'69\'a4\'a3\'a5\'5b
+\f0  //
+\f1 \'a7\'ef\'c5\'dc\'a6\'72\'c5\'e9\'ae\'e6\'a6\'a1
+\f0 \
+      "disable_web_page_preview": true, //
+\f1 \'ba\'f4\'ad\'b6\'b9\'77\'c4\'fd
+\f0 \
+    \}\
+    if (body.message.text.indexOf("/start") === 0) \{\
+      // 
+\f1 \'a8\'fa\'b1\'6f\'a8\'cf\'a5\'ce\'aa\'cc\'a6\'57\'ba\'d9
+\f0 \
+      //var mentionName = getMentionName(body.message.from);\
+      // 
+\f1 \'a6\'5e\'b6\'c7\'b0\'54\'ae\'a7\'a1\'47\'bd\'d0\'bf\'e9\'a4\'4a\'c3\'f6\'c1\'e4\'a6\'72
+\f0 \
+      payload.text = "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'b1\'7a\'aa\'ba\'a9\'6d\'a6\'57\'a1\'47
+\f0 ";\
+      // 
+\f1 \'b3\'5d\'a9\'77\'c1\'e4\'bd\'4c
+\f0 \
+      var force = \{\};\
+      force.force_reply = true;\
+      payload.reply_markup = force;\
+      // 
+\f1 \'a6\'5e\'b6\'c7\'b0\'54\'ae\'a7
+\f0 \
+      return payload;\
+    \}\
+    if (body.message.reply_to_message && body.message.reply_to_message.text === "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'b1\'7a\'aa\'ba\'a9\'6d\'a6\'57\'a1\'47
+\f0 ") \{\
+      var messageDate = new Date();\
+      var conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      var stmt = conn.prepareStatement("INSERT INTO stu_name(chat_id, bname, sname, gender, school, grade, sschool, sgrade, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.message.chat.id);\
+      stmt.setString(2, body.message.text);\
+      stmt.setString(3, "null");\
+      stmt.setString(4, "null");\
+      stmt.setString(5, "null");\
+      stmt.setString(6, "null");\
+      stmt.setString(7, "null");\
+      stmt.setString(8, "null");\
+      stmt.setString(9, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      //payload.text = "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'b6\'f1\'bc\'67\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f2 \uc0\u10084 \u65039 \u8205 \u55357 \u56613 
+\f0 ";\
+      payload.text = "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'a4\'70\'be\'c7\'a6\'f1\'aa\'ba\'a9\'6d\'a6\'57\'a1\'47
+\f0 ";\
+      var force = \{\};\
+      force.force_reply = true;\
+      payload.reply_markup = force;\
+      return payload;\
+    \}\
+    if (body.message.reply_to_message && body.message.reply_to_message.text === "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'a4\'70\'be\'c7\'a6\'f1\'aa\'ba\'a9\'6d\'a6\'57\'a1\'47
+\f0 ") \{\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("SELECT * FROM stu_name WHERE chat_id = ?");\
+      stmt.setString(1, body.message.chat.id);\
+      const rs = stmt.executeQuery();\
+      if (rs.next()) \{\
+        const updateStmt = conn.prepareStatement("UPDATE stu_name SET sname = ? WHERE chat_id = ?");\
+        updateStmt.setString(1, body.message.text);\
+        updateStmt.setString(2, body.message.chat.id);\
+        updateStmt.executeUpdate();\
+        updateStmt.close();\
+        rs.close();\
+        conn.close();\
+        payload.text = "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'b1\'7a\'aa\'ba\'a9\'ca\'a7\'4f\'a1\'47
+\f0 ";\
+        var force = \{\};\
+        force.force_reply = true;\
+        payload.reply_markup = force;\
+        return payload;\
+      \}\
+    \}\
+    if (body.message.reply_to_message && body.message.reply_to_message.text === "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'b1\'7a\'aa\'ba\'a9\'ca\'a7\'4f\'a1\'47
+\f0 ") \{\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("SELECT * FROM stu_name WHERE chat_id = ?");\
+      stmt.setString(1, body.message.chat.id);\
+      const rs = stmt.executeQuery();\
+      if (rs.next()) \{\
+        const updateStmt = conn.prepareStatement("UPDATE stu_name SET gender = ? WHERE chat_id = ?");\
+        updateStmt.setString(1, body.message.text);\
+        updateStmt.setString(2, body.message.chat.id);\
+        updateStmt.executeUpdate();\
+        updateStmt.close();\
+        rs.close();\
+        conn.close();\
+        payload.text = "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'b1\'7a\'a9\'d2\'b4\'4e\'c5\'aa\'aa\'ba\'be\'c7\'ae\'d5\'a1\'47\'a1\'5d
+\f0 XX
+\f1 \'a4\'6a\'be\'c7\'a1\'5e
+\f0 ";\
+        var force = \{\};\
+        force.force_reply = true;\
+        payload.reply_markup = force;\
+        return payload;\
+      \}\
+    \}\
+    if (body.message.reply_to_message && body.message.reply_to_message.text === "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'b1\'7a\'a9\'d2\'b4\'4e\'c5\'aa\'aa\'ba\'be\'c7\'ae\'d5\'a1\'47\'a1\'5d
+\f0 XX
+\f1 \'a4\'6a\'be\'c7\'a1\'5e
+\f0 ") \{\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("SELECT * FROM stu_name WHERE chat_id = ?");\
+      stmt.setString(1, body.message.chat.id);\
+      const rs = stmt.executeQuery();\
+      if (rs.next()) \{\
+        const updateStmt = conn.prepareStatement("UPDATE stu_name SET school = ? WHERE chat_id = ?");\
+        updateStmt.setString(1, body.message.text);\
+        updateStmt.setString(2, body.message.chat.id);\
+        updateStmt.executeUpdate();\
+        updateStmt.close();\
+        rs.close();\
+        conn.close();\
+        payload.text = "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'a8\'74\'af\'c5\'a1\'47\'a1\'5d
+\f0 XX
+\f1 \'a8\'74
+\f0  X
+\f1 \'a6\'7e\'af\'c5\'a1\'5e
+\f0 ";\
+        var force = \{\};\
+        force.force_reply = true;\
+        payload.reply_markup = force;\
+        return payload;\
+      \}\
+    \}\
+    if (body.message.reply_to_message && body.message.reply_to_message.text === "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'a8\'74\'af\'c5\'a1\'47\'a1\'5d
+\f0 XX
+\f1 \'a8\'74
+\f0  X
+\f1 \'a6\'7e\'af\'c5\'a1\'5e
+\f0 ") \{\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("SELECT * FROM stu_name WHERE chat_id = ?");\
+      stmt.setString(1, body.message.chat.id);\
+      const rs = stmt.executeQuery();\
+      if (rs.next()) \{\
+        const updateStmt = conn.prepareStatement("UPDATE stu_name SET grade = ? WHERE chat_id = ?");\
+        updateStmt.setString(1, body.message.text);\
+        updateStmt.setString(2, body.message.chat.id);\
+        updateStmt.executeUpdate();\
+        updateStmt.close();\
+        rs.close();\
+        conn.close();\
+        payload.text = "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'a4\'70\'be\'c7\'a6\'f1\'b4\'4e\'c5\'aa\'aa\'ba\'be\'c7\'ae\'d5\'a1\'47\'a1\'5d
+\f0 XX
+\f1 \'b0\'ea\'a4\'a4\'a1\'42\'a4\'70\'be\'c7\'a1\'5e
+\f0 ";\
+        var force = \{\};\
+        force.force_reply = true;\
+        payload.reply_markup = force;\
+        return payload;\
+      \}\
+    \}\
+    if (body.message.reply_to_message && body.message.reply_to_message.text === "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'a4\'70\'be\'c7\'a6\'f1\'b4\'4e\'c5\'aa\'aa\'ba\'be\'c7\'ae\'d5\'a1\'47\'a1\'5d
+\f0 XX
+\f1 \'b0\'ea\'a4\'a4\'a1\'42\'a4\'70\'be\'c7\'a1\'5e
+\f0 ") \{\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("SELECT * FROM stu_name WHERE chat_id = ?");\
+      stmt.setString(1, body.message.chat.id);\
+      const rs = stmt.executeQuery();\
+      if (rs.next()) \{\
+        const updateStmt = conn.prepareStatement("UPDATE stu_name SET sschool = ? WHERE chat_id = ?");\
+        updateStmt.setString(1, body.message.text);\
+        updateStmt.setString(2, body.message.chat.id);\
+        updateStmt.executeUpdate();\
+        updateStmt.close();\
+        rs.close();\
+        conn.close();\
+        payload.text = "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'a4\'70\'be\'c7\'a6\'f1\'aa\'ba\'a6\'7e\'af\'c5\'a1\'47\'a1\'5d
+\f0 X
+\f1 \'a6\'7e\'af\'c5\'a1\'5e
+\f0 ";\
+        var force = \{\};\
+        force.force_reply = true;\
+        payload.reply_markup = force;\
+        return payload;\
+      \}\
+    \}\
+    if (body.message.reply_to_message && body.message.reply_to_message.text === "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'a4\'70\'be\'c7\'a6\'f1\'aa\'ba\'a6\'7e\'af\'c5\'a1\'47\'a1\'5d
+\f0 X
+\f1 \'a6\'7e\'af\'c5\'a1\'5e
+\f0 ") \{\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("SELECT * FROM stu_name WHERE chat_id = ?");\
+      stmt.setString(1, body.message.chat.id);\
+      const rs = stmt.executeQuery();\
+      if (rs.next()) \{\
+        const updateStmt = conn.prepareStatement("UPDATE stu_name SET sgrade = ? WHERE chat_id = ?");\
+        updateStmt.setString(1, body.message.text);\
+        updateStmt.setString(2, body.message.chat.id);\
+        updateStmt.executeUpdate();\
+        updateStmt.close();\
+        rs.close();\
+        conn.close();\
+        payload.text = "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'b6\'f1\'bc\'67\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f2 \uc0\u10084 \u65039 \u8205 \u55357 \u56613 
+\f0 ";\
+        return payload;\
+      \}\
+    \}\
+    if (body.message.text.indexOf("/search") === 0) \{\
+      // 
+\f1 \'a8\'fa\'b1\'6f\'a8\'cf\'a5\'ce\'aa\'cc\'a6\'57\'ba\'d9
+\f0 \
+      //var mentionName = getMentionName(body.message.from);\
+      // 
+\f1 \'a6\'5e\'b6\'c7\'b0\'54\'ae\'a7\'a1\'47\'bd\'d0\'bf\'e9\'a4\'4a\'c3\'f6\'c1\'e4\'a6\'72
+\f0 \
+      payload.text = "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'c3\'f6\'c1\'e4\'a6\'72
+\f0 ";\
+      // 
+\f1 \'b3\'5d\'a9\'77\'c1\'e4\'bd\'4c
+\f0 \
+      var force = \{\};\
+      force.force_reply = true;\
+      payload.reply_markup = force;\
+      // 
+\f1 \'a6\'5e\'b6\'c7\'b0\'54\'ae\'a7
+\f0 \
+      return payload;\
+    \}\
+    if (body.message.reply_to_message && body.message.reply_to_message.text === "
+\f1 \'bd\'d0\'bf\'e9\'a4\'4a\'c3\'f6\'c1\'e4\'a6\'72
+\f0 ") \{\
+      // 
+\f1 \'a8\'fa\'b1\'6f\'a8\'cf\'a5\'ce\'aa\'cc\'bf\'e9\'a4\'4a\'aa\'ba\'c3\'f6\'c1\'e4\'a6\'72
+\f0 \
+      var keyword = body.message.text;\
+      // 
+\f1 \'b1\'71\'b8\'ea\'ae\'c6\'ae\'77\'a4\'a4\'b7\'6a\'b4\'4d\'ac\'db\'c3\'f6\'b8\'ea\'b0\'54
+\f0 \
+      var searchResultObj = searchFromDatabase(keyword);\
+      var searchResult = searchResultObj.searchResult;\
+      var keywords = searchResultObj.keywords.join(", ");\
+      // 
+\f1 \'a6\'70\'aa\'47\'a6\'b3\'b7\'6a\'b4\'4d\'b5\'b2\'aa\'47
+\f0 \
+      if (searchResult.length > 0) \{\
+        if (keywords !== "error") \{\
+          // 
+\f1 \'b3\'5d\'a9\'77\'a6\'5e\'b6\'c7\'b0\'54\'ae\'a7
+\f0 \
+          payload.text = "
+\f1 \'ae\'da\'be\'da\'bf\'e9\'a4\'4a\'aa\'ba\'c3\'f6\'c1\'e4\'a6\'72\'a1\'41\'b1\'7a\'a6\'fc\'a5\'47\'b7\'51\'ac\'64\'b8\'df\'bb\'50
+\f0  
+\f1 \'a1\'75
+\f0 " + keywords + "
+\f1 \'a1\'76
+\f0  
+\f1 \'a6\'b3\'c3\'f6\'aa\'ba\'b8\'ea\'b0\'54\'a1\'41\'a5\'48\'a4\'55\'ac\'4f\'ac\'64\'b8\'df\'b5\'b2\'aa\'47\'a1\'47
+\f0 \\n\\n";\
+        \}\
+        else \{\
+          payload.text = "
+\f1 \'ae\'da\'be\'da\'bf\'e9\'a4\'4a\'aa\'ba\'c3\'f6\'c1\'e4\'a6\'72\'a1\'41\'b1\'7a\'a6\'fc\'a5\'47\'b7\'51\'ac\'64\'b8\'df\'bb\'50
+\f0  
+\f1 \'a1\'75
+\f0 " + keyword + "
+\f1 \'a1\'76
+\f0  
+\f1 \'a6\'b3\'c3\'f6\'aa\'ba\'b8\'ea\'b0\'54\'a1\'41\'a5\'48\'a4\'55\'ac\'4f\'ac\'64\'b8\'df\'b5\'b2\'aa\'47\'a1\'47
+\f0 \\n\\n";\
+        \}\
+        for (var i = 0; i < searchResult.length; i++) \{\
+          searchResult = searchResult.toString().replace(",", "\\n");\
+        \}\
+        payload.text += searchResult;\
+        payload.text += "\\n\\n
+\f1 \'b7\'51\'a6\'41\'a6\'b8\'a8\'cf\'a5\'ce\'b7\'6a\'b4\'4d\'a5\'5c\'af\'e0\'bd\'d0\'bf\'e9\'a4\'4a
+\f0  /search 
+\f1 \'a1\'43
+\f0 ";\
+      \}\
+      // 
+\f1 \'a6\'70\'aa\'47\'a8\'53\'a6\'b3\'b7\'6a\'b4\'4d\'b5\'b2\'aa\'47
+\f0 \
+      else \{\
+        payload.text = "
+\f1 \'a9\'ea\'ba\'70\'a1\'41\'a7\'e4\'a4\'a3\'a8\'ec\'bb\'50\'a1\'75
+\f0 " + keyword + "
+\f1 \'a1\'76\'ac\'db\'c3\'f6\'aa\'ba\'b8\'ea\'b0\'54\'a1\'41\'a5\'69\'b9\'c1\'b8\'d5\'bf\'e9\'a4\'4a\'bb\'50\'b1\'d0\'be\'c7\'ac\'db\'c3\'f6\'aa\'ba\'c3\'f6\'c1\'e4\'a6\'72\'a1\'43
+\f0 ";\
+        payload.text += "\\n\\n
+\f1 \'b7\'51\'a6\'41\'a6\'b8\'a8\'cf\'a5\'ce\'b7\'6a\'b4\'4d\'a5\'5c\'af\'e0\'bd\'d0\'bf\'e9\'a4\'4a
+\f0  /search 
+\f1 \'a1\'43
+\f0 ";\
+      \}\
+      // 
+\f1 \'a6\'5e\'b6\'c7\'b0\'54\'ae\'a7
+\f0 \
+      return payload;\
+    \}\
+    if (body.message.text.indexOf("/removekeyboard") === 0) \{\
+      var replyKeyboardRemove = \{\
+        remove_keyboard: true,\
+        selective: false,\
+      \};\
+      payload.text = "
+\f1 \'ab\'f6\'c1\'e4\'a4\'77\'b2\'be\'b0\'a3\'a1\'43
+\f0 ";\
+      payload.reply_markup = replyKeyboardRemove;\
+      return payload;\
+    \}\
+    if (body.message.text.indexOf("/option") === 0) \{\
+      var mentionName = getMentionName(body.message.from);\
+      payload.text = "
+\f1 \'b1\'7a\'a6\'6e\'a1\'49
+\f0 " + mentionName + "
+\f1 \'a1\'41
+\f0  ";\
+      payload.text += "
+\f1 \'bd\'d0\'c2\'49\'c0\'bb\'a4\'55\'a6\'43\'bf\'ef\'b6\'b5\'ac\'64\'ac\'dd\'a4\'ba\'ae\'65\'a1\'43
+\f0 "; //+=\
+\
+      var command9 = [\
+        "
+\f1 \'b0\'56\'bd\'6d\'b8\'ea\'b0\'54
+\f0 ",\
+        "
+\f1 \'bc\'d2\'c0\'c0\'b0\'56\'bd\'6d
+\f0 ",\
+        "
+\f1 \'a6\'5e\'b3\'f8
+\f0 ",\
+        "ChatGPT",\
+        "
+\f1 \'a7\'f3\'a6\'68\'b8\'ea\'b0\'54
+\f0 ",\
+        "
+\f1 \'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58
+\f0 ",\
+      ];\
+\
+      var replyKeyboardMarkup = \{\};\
+      replyKeyboardMarkup.keyboard = [];\
+      replyKeyboardMarkup.resize_keyboard = true;\
+      replyKeyboardMarkup.one_time_keyboard = false;\
+      replyKeyboardMarkup.selective = true;\
+\
+      var count = 0;\
+      for (var i = 0; i < command9.length / 2; i++) \{\
+        var keyboardRow = [];\
+        for (var j = 0; j < 2; j++) \{\
+          var keyboardButton = \{\
+            text: command9[i * 2 + j],\
+          \};\
+          count++;\
+          keyboardRow.push(keyboardButton);\
+          if (count >= command9.length) \{\
+            break;\
+          \}\
+        \}\
+        replyKeyboardMarkup.keyboard.push(keyboardRow);\
+      \}\
+      payload.reply_markup = replyKeyboardMarkup;\
+\
+      return payload;\
+    \}\
+    if (body.message.text.indexOf("
+\f1 \'bc\'d2\'c0\'c0\'b0\'56\'bd\'6d
+\f0 ") === 0) \{\
+      payload.text = "
+\f1 \'bd\'d0\'c2\'49\'c0\'bb\'b3\'73\'b5\'b2\'a6\'5e\'b5\'aa\'b0\'dd\'c3\'44\'a1\'41\'a7\'b9\'a6\'a8\'bc\'d2\'c0\'c0\'b0\'56\'bd\'6d\'a1\'43
+\f0 \\n"\
+        + "[
+\f1 \'bc\'d2\'c0\'c0\'b0\'56\'bd\'6d\'c3\'44\'a5\'d8
+\f0 ](t.me/QuizBot?start=gNxlbuIZ)";\
+      return payload;\
+    \}\
+    //47-80
+\f1 \'b3\'42\'b2\'7a\'b1\'61\'b0\'d1\'bc\'c6\'aa\'ba\'a9\'52\'a5\'4f
+\f0 \
+    if (body.message.text.indexOf("
+\f1 \'b0\'56\'bd\'6d\'b8\'ea\'b0\'54
+\f0 ") === 0) \{\
+      if (paras[1]) \{\
+        switch (paras[1].toLowerCase()) \{   //switch:
+\f1 \'b0\'d1\'bc\'c6\'a9\'54\'a9\'77\'aa\'ba\'b1\'a1\'aa\'70\'a4\'55\'a8\'cf\'a5\'ce
+\f0 \
+          case "people":\
+            if (paras[2]) \{\
+              if ("
+\f1 \'bd\'d0\'bf\'ef\'be\'dc\'ad\'6e\'be\'c7\'b2\'df\'aa\'ba\'b6\'b5\'a5\'d8
+\f0 ".toLowerCase().indexOf(paras[2]) >= 0) \{\
+                payload.text = "JS
+\f1 \'af\'ab\'a7\'de\'af\'e0
+\f0  - https://www.youtube.com/channel/UC6tPP3jOTKgjqfDgqMsaG4g";\
+              \}\
+              if ("
+\f1 \'a4\'a3\'aa\'be\'b9\'44\'a6\'41\'a5\'5b\'a4\'40
+\f0 ".toLowerCase().indexOf(paras[2]) >= 0) \{\
+                payload.text = "
+\f1 \'ae\'a9\'aa\'c5\'aa\'ba\'a4\'e9\'b1\'60
+\f0  - https://www.youtube.com/channel/UCii04BCvYIdQvshrdNDAcww";\
+              \}\
+              if ("abccc".toLowerCase().indexOf(paras[2]) >= 0) \{\
+                payload.text = "YuFeng Deng - https://www.youtube.com/channel/UCG6xoef2xU86hnrCsS5m5Cw";\
+              \}\
+            \} else \{\
+              payload.text = "
+\f1 \'a4\'a3\'aa\'be\'b9\'44\'ad\'6e\'a5\'b4\'a4\'b0\'bb\'f2
+\f0 \\n"\
+                + "
+\f1 \'a4\'a3\'aa\'be\'b9\'44\'a6\'41\'a5\'5b\'a4\'40
+\f0 \\n"\
+                + "abccc\\n";\
+              return payload;\
+            \}\
+            break;\
+          default:\
+            payload.text = "
+\f1 \'bf\'ef\'be\'dc\'c3\'44
+\f0 ";\
+            break;\
+        \}\
+        return payload;\
+      \} else \{\
+        payload.text = "
+\f1 \'bd\'d0\'bf\'ef\'be\'dc\'b1\'7a\'ad\'6e\'be\'c7\'b2\'df\'aa\'ba\'b6\'b5\'a5\'d8
+\f0 \\n";\
+        var inlineKeyboardMarkup = \{\};\
+        inlineKeyboardMarkup.inline_keyboard = [];\
+        var keyboardRow = [];\
+        var keyboardButton1 = \{\
+          text: "
+\f1 \'b1\'d0\'be\'c7
+\f0 ",\
+          callback_data: "
+\f1 \'a1\'75\'b1\'d0\'be\'c7\'a1\'76
+\f0 "\
+        \};\
+        var keyboardButton2 = \{\
+          text: "
+\f1 \'b0\'f2\'a5\'bb\'aa\'60\'b7\'4e\'a8\'c6\'b6\'b5
+\f0 ",\
+          callback_data: "
+\f1 \'a1\'75\'b0\'f2\'a5\'bb\'aa\'60\'b7\'4e\'a8\'c6\'b6\'b5\'a1\'76
+\f0 "\
+        \};\
+\
+        var keyboardRow2 = [];\
+        var keyboardButton3 = \{\
+          text: "
+\f1 \'ac\'db\'c3\'f6\'b1\'d0\'be\'c7\'bc\'76\'a4\'f9
+\f0 ",\
+          callback_data: "
+\f1 \'a1\'75
+\f0 video
+\f1 \'a1\'76
+\f0 "\
+        \};\
+        var keyboardButton4 = \{\
+          text: "
+\f1 \'ac\'db\'c3\'f6\'b1\'d0\'be\'c7\'a4\'e5\'b3\'b9
+\f0 ",\
+          callback_data: "
+\f1 \'a1\'75
+\f0 article
+\f1 \'a1\'76
+\f0 "\
+        \};\
+\
+        keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+        keyboardRow.push(keyboardButton2);\
+\
+        keyboardRow2.push(keyboardButton3); //
+\f1 \'b1\'71\'a6\'e6\'b8\'cc\'b1\'c0\'b6\'69\'c1\'e4\'bd\'4c
+\f0 \
+        keyboardRow2.push(keyboardButton4);\
+        inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+        inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+        payload.reply_markup = inlineKeyboardMarkup;\
+        return payload;\
+      \}\
+    \}\
+    if (body.message.text.indexOf("
+\f1 \'a6\'5e\'b3\'f8
+\f0 ") === 0) \{\
+      payload.text = "
+\f1 \'bd\'d0\'bf\'ef\'be\'dc\'b1\'7a\'ad\'6e\'a6\'5e\'b3\'f8\'aa\'ba\'b6\'b5\'a5\'d8
+\f0 \\n";\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "
+\f1 \'b5\'fb\'a6\'f4\'be\'c7\'a5\'cd\'a4\'57\'bd\'d2\'aa\'ed\'b2\'7b
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'b5\'fb\'a6\'f4\'be\'c7\'a5\'cd\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "
+\f1 \'b1\'d0\'be\'c7\'a4\'e9\'bb\'78\'a6\'5e\'b3\'f8
+\f0 ",\
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSeZ9YNGR8FCKKHH3DiOch61-BQxn-8Moor86Zo6abzGYbevGg/viewform?usp=sf_link"\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      keyboardRow2.push(keyboardButton2);\
+\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.message.text.indexOf("chatgpt") === 0) \{\
+      payload.text = "
+\f1 \'c5\'77\'aa\'ef\'a8\'cf\'a5\'ce
+\f0 ChatGPT
+\f1 \'a1\'41\'c2\'49\'c0\'bb\'b3\'73\'b5\'b2\'a7\'59\'a5\'69\'b6\'7d\'a9\'6c\'a1\'43
+\f0 \\n"\
+        + "[ChatGPT](https://t.me/JWGPT3_bot)";\
+      return payload;\
+    \}\
+    if (body.message.text.indexOf("
+\f1 \'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58
+\f0 ") === 0) \{\
+      payload.text = "
+\f1 \'c5\'77\'aa\'ef\'b4\'a3\'a8\'d1\'a8\'cf\'a5\'ce\'a6\'5e\'f5\'58\'a1\'41\'bd\'d0\'bf\'ef\'be\'dc\'b1\'7a\'b7\'51\'ad\'6e\'b4\'a3\'a8\'d1\'aa\'ba\'a6\'5e\'f5\'58\'c3\'fe\'a7\'4f\'a1\'47
+\f0 ";\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "
+\f1 \'be\'e3\'c5\'e9\'a5\'5c\'af\'e0
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'be\'e3\'c5\'e9\'a5\'5c\'af\'e0\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "
+\f1 \'a8\'cf\'a5\'ce\'ac\'79\'ba\'5a\'ab\'d7
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'cf\'a5\'ce\'ac\'79\'ba\'5a\'ab\'d7\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow3 = [];\
+      var keyboardButton3 = \{\
+        text: "
+\f1 \'ac\'b0\'be\'f7\'be\'b9\'a4\'48\'b5\'fb\'a4\'c0
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'ac\'b0\'be\'f7\'be\'b9\'a4\'48\'b5\'fb\'a4\'c0\'a1\'76
+\f0 "\
+      \};\
+      var keyboardRow4 = [];\
+      var keyboardButton4 = \{\
+        text: "
+\f1 \'a8\'e4\'a5\'4c
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'a8\'e4\'a5\'4c\'a1\'76
+\f0 "\
+      \};\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      keyboardRow2.push(keyboardButton2);\
+      keyboardRow3.push(keyboardButton3);\
+      keyboardRow4.push(keyboardButton4);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow3);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow4);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    if (body.message.reply_to_message && body.message.reply_to_message.text === "
+\f1 \'a8\'e4\'a5\'4c\'a1\'47
+\f0 ") \{\
+      var messageDate = new Date();\
+      var conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      var stmt = conn.prepareStatement("INSERT INTO feedback (chat_id, function, fluency, score, other, date) VALUES (?, ?, ?, ?, ?, ?)");\
+      stmt.setString(1, body.message.chat.id);\
+      stmt.setString(2, "null");\
+      stmt.setString(3, "null");\
+      stmt.setString(4, "null");\
+      stmt.setString(5, body.message.text);\
+      stmt.setString(6, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      payload.text = "
+\f1 \'b7\'50\'c1\'c2\'b1\'7a\'aa\'ba\'ab\'d8\'c4\'b3\'a1\'41\'af\'ac\'b1\'7a\'a6\'b3\'ad\'d3\'ac\'fc\'a6\'6e\'aa\'ba\'a4\'40\'a4\'d1\'a1\'49
+\f0 ";\
+      return payload;\
+    \}\
+    if (body.message.text.indexOf("
+\f1 \'a7\'f3\'a6\'68\'b8\'ea\'b0\'54
+\f0 ") === 0) \{\
+      payload.text = "
+\f1 \'a5\'78\'c6\'57\'a7\'c6\'b1\'e6\'b3\'a1\'b8\'a8\'a8\'f3\'b7\'7c\'ac\'db\'c3\'f6\'b8\'ea\'b0\'54
+\f0 \\n";\
+      var inlineKeyboardMarkup = \{\};\
+      inlineKeyboardMarkup.inline_keyboard = [];\
+      var keyboardRow = [];\
+      var keyboardButton1 = \{\
+        text: "facebook",\
+        url: "https://www.facebook.com/ihopetw/?locale=zh_TW"\
+      \};\
+      var keyboardRow2 = [];\
+      var keyboardButton2 = \{\
+        text: "
+\f1 \'c1\'70\'b5\'b8\'b8\'ea\'b0\'54
+\f0 ",\
+        callback_data: "
+\f1 \'a1\'75\'bb\'50\'a8\'f3\'b7\'7c\'c1\'70\'b5\'b8\'a1\'76
+\f0 "\
+      \};\
+\
+      keyboardRow.push(keyboardButton1); //
+\f1 \'ab\'f6\'b6\'73\'b1\'c0\'b6\'69\'a6\'e6\'b8\'cc
+\f0 \
+      keyboardRow2.push(keyboardButton2);\
+\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow);\
+      inlineKeyboardMarkup.inline_keyboard.push(keyboardRow2);\
+      payload.reply_markup = inlineKeyboardMarkup;\
+      return payload;\
+    \}\
+    else if (body.message.text) \{\
+      // 
+\f1 \'a8\'fa\'b1\'6f\'a8\'cf\'a5\'ce\'aa\'cc\'bf\'e9\'a4\'4a\'aa\'ba\'c3\'f6\'c1\'e4\'a6\'72
+\f0 \
+      //var message = body.message.text;\
+      // 
+\f1 \'b1\'71\'b8\'ea\'ae\'c6\'ae\'77\'a4\'a4\'b7\'6a\'b4\'4d\'ac\'db\'c3\'f6\'b8\'ea\'b0\'54
+\f0 \
+      var messageDate = new Date();\
+      const conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL");\
+      const stmt = conn.prepareStatement("INSERT INTO chat_log(chat_id, message, sender_name, date) VALUES (?, ?, ?, ?)");\
+      stmt.setString(1, body.message.chat.id);\
+      stmt.setString(2, body.message.text);\
+      //stmt.setString(3, body.message.from.id);\
+      stmt.setString(3, body.message.from.first_name);\
+      stmt.setString(4, Utilities.formatDate(messageDate, "GMT+8", "yyyy-MM-dd HH:mm:ss"));\
+      stmt.execute();\
+      stmt.close();\
+      conn.close();\
+      // 
+\f1 \'a6\'5e\'b6\'c7\'b0\'54\'ae\'a7
+\f0 \
+      return payload;\
+    \}\
+  \}\
+  return payload\
+\}\
+\
+// 
+\f1 \'b7\'6a\'b4\'4d\'b8\'ea\'ae\'c6\'ae\'77\'a4\'a4\'b2\'c5\'a6\'58\'c3\'f6\'c1\'e4\'a6\'72\'aa\'ba\'b8\'ea\'ae\'c6
+\f0 \
+function searchFromDatabase(keyword) \{\
+  var url = "http://api.pullword.com/get.php?source=" + keyword + "&param1=0&param2=0";\
+  var response = UrlFetchApp.fetch(url);\
+  var result = response.getContentText();\
+  var keywords = result.split("\\r\\n");\
+  keywords = keywords.filter(function (str) \{\
+    return /\\S/.test(str); // 
+\f1 \'a5\'75\'ab\'4f\'af\'64\'ab\'44\'aa\'c5\'a6\'72\'a6\'ea
+\f0 \
+  \});\
+\
+  var conn = Jdbc.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12603359?useUnicode=true&characterEncoding=utf8", "sql12603359", "7fSf6yVhTL"); // 
+\f1 \'ab\'d8\'a5\'df\'b8\'ea\'ae\'c6\'ae\'77\'b3\'73\'bd\'75
+\f0 \
+  var stmt = conn.prepareStatement('SELECT * FROM teaching WHERE question LIKE ? OR solution LIKE ?'); // 
+\f1 \'ab\'d8\'a5\'df
+\f0  SQL 
+\f1 \'ac\'64\'b8\'df\'bb\'79\'a5\'79
+\f0 \
+  var searchResult = []; // 
+\f1 \'c0\'78\'a6\'73\'ac\'64\'b8\'df\'b5\'b2\'aa\'47
+\f0 \
+  var searchResultMap = \{\}; // 
+\f1 \'a5\'ce\'a8\'d3\'ac\'f6\'bf\'fd\'a4\'77\'b8\'67\'a6\'73\'a6\'62\'aa\'ba\'b7\'6a\'b4\'4d\'b5\'b2\'aa\'47
+\f0 \
+  if (keyword !== "") \{\
+    stmt.setString(1, '%' + keyword + '%'); // 
+\f1 \'b1\'4e\'c3\'f6\'c1\'e4\'a6\'72\'a5\'5b\'a4\'4a
+\f0  SQL 
+\f1 \'ac\'64\'b8\'df\'bb\'79\'a5\'79
+\f0 \
+    stmt.setString(2, '%' + keyword + '%'); // 
+\f1 \'b1\'4e\'c3\'f6\'c1\'e4\'a6\'72\'a5\'5b\'a4\'4a
+\f0  SQL 
+\f1 \'ac\'64\'b8\'df\'bb\'79\'a5\'79\'a1\'41\'b7\'6a\'b4\'4d
+\f0  question 
+\f1 \'a9\'ce
+\f0  solution 
+\f1 \'a8\'e2\'ad\'d3\'c4\'e6\'a6\'ec
+\f0 \
+    var rs = stmt.executeQuery(); // 
+\f1 \'b0\'f5\'a6\'e6
+\f0  SQL 
+\f1 \'ac\'64\'b8\'df
+\f0 \
+    var i = 1;\
+    while (rs.next()) \{\
+      var title = [];\
+      var t = "";\
+      t += i + "\\\\. " + rs.getString(3);\
+      title.push(t);\
+      var description = [];\
+      var d = "";\
+      d += rs.getString(4) + ",";\
+      description.push(d);\
+      //row.push(rs.getString('column3'));\
+      searchResult.push(title);\
+      searchResult.push(description);\
+      i += 1;\
+    \}\
+    rs.close(); // 
+\f1 \'c3\'f6\'b3\'ac\'b8\'ea\'ae\'c6\'ae\'77\'b3\'73\'bd\'75
+\f0 \
+  \}\
+  if (searchResult.length === 0) \{\
+    // 
+\f1 \'a8\'cc\'a6\'b8\'b7\'6a\'b4\'4d\'b8\'ea\'ae\'c6\'ae\'77
+\f0 \
+    for (var i = 0; i < keywords.length; i++) \{\
+      stmt.setString(1, '%' + keywords[i] + '%'); // 
+\f1 \'b1\'4e\'c3\'f6\'c1\'e4\'a6\'72\'a5\'5b\'a4\'4a
+\f0  SQL 
+\f1 \'ac\'64\'b8\'df\'bb\'79\'a5\'79
+\f0 \
+      stmt.setString(2, '%' + keywords[i] + '%'); // 
+\f1 \'b1\'4e\'c3\'f6\'c1\'e4\'a6\'72\'a5\'5b\'a4\'4a
+\f0  SQL 
+\f1 \'ac\'64\'b8\'df\'bb\'79\'a5\'79\'a1\'41\'b7\'6a\'b4\'4d
+\f0  question 
+\f1 \'a9\'ce
+\f0  solution 
+\f1 \'a8\'e2\'ad\'d3\'c4\'e6\'a6\'ec
+\f0 \
+      var rs = stmt.executeQuery(); // 
+\f1 \'b0\'f5\'a6\'e6
+\f0  SQL 
+\f1 \'ac\'64\'b8\'df
+\f0 \
+      // 
+\f1 \'b1\'4e\'ac\'64\'b8\'df\'b5\'b2\'aa\'47\'a5\'5b\'a4\'4a
+\f0  searchResult\
+      while (rs.next()) \{\
+        var question = rs.getString(3);\
+        var solution = rs.getString(4);\
+        var key = question + solution;\
+        if (!searchResultMap[key]) \{\
+          var title = [];\
+          var t = "";\
+          t += searchResult.length / 2 + 1 + "\\\\. " + question;\
+          title.push(t);\
+          var description = [];\
+          var d = "";\
+          d += solution + ",";\
+          description.push(d);\
+          searchResult.push(title);\
+          searchResult.push(description);\
+          searchResultMap[key] = true;\
+        \}\
+      \}\
+      // 
+\f1 \'c3\'f6\'b3\'ac\'b8\'ea\'ae\'c6\'ae\'77\'b3\'73\'bd\'75
+\f0 \
+      rs.close();\
+    \}\
+  \}\
+  stmt.close();\
+  conn.close();\
+  //console.log(searchResult);\
+  //rs.close(); // 
+\f1 \'c3\'f6\'b3\'ac\'b8\'ea\'ae\'c6\'ae\'77\'b3\'73\'bd\'75
+\f0 \
+  return \{ searchResult: searchResult, keywords: keywords \};\
+\}}
